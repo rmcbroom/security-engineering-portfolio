@@ -7,6 +7,19 @@
 > **Disclosure:** Showcase / Clean-Room  
 > **Evidence:** Generalized experience summary / Independently authored models
 
+## System check // quick read
+
+> **The premise:** the security tool is part of the production system—and its dependencies can fail independently of its policy logic.
+
+- **Hands-on context:** AWS and GCP security infrastructure, migrations, upgrades, health, patching, and troubleshooting.
+- **Security boundary:** service identities, permissions, authentication, APIs, and integrations.
+- **Operational surface:** cloud-hosted scanners, BigQuery telemetry context, monitoring, escalation, and vendor coordination.
+- **Validation rule:** healthy infrastructure does not automatically mean a healthy security control.
+
+The diagrams are independent clean-room models, not an employer architecture or claim of enterprise cloud ownership.
+
+[Trace the dependency model](#conceptual-architecture-model) · [Follow the troubleshooting path](#troubleshooting-model) · [Review layered validation](#layered-validation)
+
 ## Problem
 
 Security platforms are themselves production systems. A correct policy or detection does not make a capability operational when its infrastructure is unhealthy, telemetry is unavailable, machine identity fails, permissions change, integrations break, scanners become unhealthy, or an upgrade introduces incompatibility.
@@ -247,6 +260,9 @@ This experience informs how I reason about:
 
 These are generalized decision areas. No unsupported historical outcome or specific employer decision is implied.
 
+<details>
+<summary><strong>Evidence map // experience, clean-room models, private detail</strong></summary>
+
 ## Evidence and Disclosure Classification
 
 ### PROFESSIONAL EXPERIENCE
@@ -280,6 +296,8 @@ These are generalized decision areas. No unsupported historical outcome or speci
 - Internal telemetry, BigQuery queries, datasets, schemas, and table names
 - Scanner configuration and internal runbooks
 - Screenshots, incident details, and employer-specific operating procedures
+
+</details>
 
 ## What I Learned
 

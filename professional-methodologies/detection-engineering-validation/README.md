@@ -7,6 +7,20 @@
 > **Disclosure:** Showcase / Clean-Room  
 > **Evidence:** Independently recreated methodology / Synthetic public example
 
+## Signal path // quick read
+
+> **The question:** Can the available evidence support the behavior we want to detect—and will the result help an analyst make a decision?
+
+- Start with a security hypothesis, not a query.
+- Test telemetry fitness before trusting detection logic.
+- Validate positive, negative, ambiguous, and failure cases.
+- Measure representative samples before tuning.
+- Give the control ownership, monitoring, review, and retirement criteria.
+
+**Public proof:** clean-room lifecycle models and an eight-event fictional validation exercise. Employer rules, telemetry, and metrics remain private.
+
+[Follow the lifecycle](#detection-engineering-lifecycle) · [See the validation method](#validation-method) · [Inspect the synthetic example](#synthetic-validation-example)
+
 ## Problem
 
 Detection engineering often begins with the wrong question:
@@ -258,6 +272,9 @@ Detection governance should preserve the reasoning and evidence needed to operat
 
 This makes the control explainable over time. A future engineer or analyst should be able to understand what the detection is meant to establish, what evidence it depends on, how its behavior was tested, and where its known limits remain.
 
+<details>
+<summary><strong>Evidence map // professional, public, private</strong></summary>
+
 ## Evidence and Disclosure Classification
 
 ### PROFESSIONAL EXPERIENCE
@@ -285,6 +302,8 @@ This makes the control explainable over time. A future engineer or analyst shoul
 - Employee, customer, account, and incident information
 - Internal metrics and historical results
 - Employer-specific thresholds, workflows, and implementation details
+
+</details>
 
 ## What I Learned
 
