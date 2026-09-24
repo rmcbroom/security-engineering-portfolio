@@ -39,7 +39,7 @@ flowchart TB
     IndependentReview --> Disclosure
     Disclosure --> Checks["Automated Integrity / Security Checks<br/>IMPLEMENTED + OBSERVED"]
     Checks --> Human[Deliberate Human Review]
-    Human --> Main[main — Intended Reviewed Public State]
+    Human --> Main[main — Ruleset-Protected Public State]
     Main --> Public[Public Portfolio]
 ```
 
@@ -57,10 +57,9 @@ Independent work may provide deeper evidence because Robin owns the underlying w
 
 ### Boundary 3 — Draft or Feature Branch to `main`
 
-Feature branches are working state. `main` is intended to represent reviewed public state.
+Feature branches and pull requests are the governed change path to `main`. The active `Main Governance` ruleset requires `Deterministic repository checks` and resolved conversations, blocks force pushes and deletion of `main`, and intentionally requires zero approving reviews for this single-owner portfolio. Portfolio Validation is implemented and observed on PR #1.
 
-- **Current:** the feature-branch and pull-request review workflow is being exercised. Deterministic Portfolio Validation is implemented and successfully ran on GitHub for PR #1. `main` does not yet require pull requests or the validation check.
-- **Target:** GitHub-hosted rules enforce pull-request-based changes to `main`, require the proven Portfolio Validation check, and restrict force pushes and branch deletion as appropriate.
+Deliberate owner review remains the human authority boundary for claim truth, disclosure safety, intellectual-property safety, ownership correctness, and publication appropriateness. GitHub enforcement does not establish those judgments.
 
 ## Governance Principles
 
@@ -92,7 +91,7 @@ Claim Review
       ↓
 Disclosure Review
       ↓
-Automated Validation [IMPLEMENTED + OBSERVED]
+Automated Validation
       ↓
 Pull Request
       ↓
@@ -101,7 +100,7 @@ Deliberate Owner Review
 main
 ```
 
-Claim and disclosure review are required human decisions for substantive material. Automated validation is implemented and has been observed successfully on PR #1. Pull-request review is being exercised, but hosted rules requiring this path remain a target and are not yet enabled.
+The `Main Governance` ruleset enforces the machine-verifiable path to `main`: pull requests, successful deterministic validation, resolved conversations, and branch-mutation restrictions. Deliberate owner review remains responsible for disclosure and claim judgment.
 
 ## Failure Model
 
@@ -113,7 +112,7 @@ Claim and disclosure review are required human decisions for substantive materia
 | Professional work misclassified as independent | Separate evidence paths and require ownership metadata | Disclosure and ownership review | Correct the classification and reassess dependent claims |
 | Broken public artifact or navigation | Use stable relative paths and validate Markdown and diagrams | Link, structure, and rendering checks | Repair before material enters the reviewed public state |
 | Accidental local or generated file | Narrow ignore rules and intentional asset review | Staged-file and repository-hygiene checks | Remove the file and refine prevention when warranted |
-| Bypass of reviewed-`main` process | Use feature branches and target hosted enforcement | Git history and hosted audit evidence | Revert or review through the normal path and document any necessary exception |
+| Bypass of reviewed-`main` process | Use feature branches and active `Main Governance` enforcement | Git history, ruleset state, and hosted audit evidence | Revert or review through the normal path and document any necessary exception |
 
 ## Reassessment
 
