@@ -37,7 +37,7 @@ flowchart TB
 
     ProfessionalReview --> Disclosure[Disclosure Boundary]
     IndependentReview --> Disclosure
-    Disclosure --> Checks[Automated Integrity / Security Checks — TARGET]
+    Disclosure --> Checks["Automated Integrity / Security Checks<br/>IMPLEMENTED + OBSERVED"]
     Checks --> Human[Deliberate Human Review]
     Human --> Main[main — Intended Reviewed Public State]
     Main --> Public[Public Portfolio]
@@ -59,8 +59,8 @@ Independent work may provide deeper evidence because Robin owns the underlying w
 
 Feature branches are working state. `main` is intended to represent reviewed public state.
 
-- **Current:** this repository uses feature branches and deliberate review, but GitHub-hosted pull-request and required-check enforcement is not configured.
-- **Target:** hosted rules will enforce pull requests and stable validation checks after the validation automation has been implemented and proven reliable.
+- **Current:** the feature-branch and pull-request review workflow is being exercised. Deterministic Portfolio Validation is implemented and successfully ran on GitHub for PR #1. `main` does not yet require pull requests or the validation check.
+- **Target:** GitHub-hosted rules enforce pull-request-based changes to `main`, require the proven Portfolio Validation check, and restrict force pushes and branch deletion as appropriate.
 
 ## Governance Principles
 
@@ -92,16 +92,16 @@ Claim Review
       ↓
 Disclosure Review
       ↓
-Automated Validation [TARGET]
+Automated Validation [IMPLEMENTED + OBSERVED]
       ↓
-Pull Request [TARGET: hosted enforcement not configured]
+Pull Request
       ↓
 Deliberate Owner Review
       ↓
 main
 ```
 
-Claim and disclosure review are required human decisions for substantive material. Automated validation and hosted pull-request enforcement are target controls and must not be treated as implemented until they exist and operate reliably.
+Claim and disclosure review are required human decisions for substantive material. Automated validation is implemented and has been observed successfully on PR #1. Pull-request review is being exercised, but hosted rules requiring this path remain a target and are not yet enabled.
 
 ## Failure Model
 
