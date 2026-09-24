@@ -1,7 +1,5 @@
 ![Robin McBroom Security Engineering Portfolio](assets/robin-mcbroom-security-engineering-hero.png)
 
-# Robin McBroom
-
 **Security gets interesting where systems stop behaving like the diagram.**
 
 I turn ambiguous, high-consequence security problems into systems people can reason about, test, and operate.
