@@ -8,6 +8,19 @@
 > **Evidence:** Verified implementation / Independently recreated public diagrams  
 > **Last Verified:** 2026-09-21 at `d7fc69fd68bfb2592e6fbccbc4ce44d462d846b0`
 
+## Build brief // read this first
+
+> **The question:** How should an automated system be structured when a wrong external action can have real consequences?
+
+- **Built independently:** a modular Python system with scheduled responsibilities, external adapters, a pre-execution risk gate, persistent operational records, and an operational API.
+- **Verified:** 78 unit tests and six architecture tests passed at the evidence revision; no integration tests were present.
+- **Engineering stance:** missing required evidence blocks the proposed action in the verified balance-evidence path.
+- **Current boundary:** durable intent, stable retry identity, reconciliation, atomic risk reservation, and authoritative pause enforcement are not implemented.
+
+`[ IMPLEMENTED / VERIFIED ]` and `[ DESIGNED — NOT IMPLEMENTED ]` remain separate throughout the page.
+
+[See the current architecture](#current-architecture) · [Find the assurance limits](#architecture-review--where-the-guarantees-stop) · [Compare the designed direction](#designed-hardening-direction)
+
 ## Problem
 
 Automated systems often combine external data, decision logic, risk evaluation, scheduled execution, persistent state, and external APIs. The engineering problem is not simply whether the system can automate an action. It is how to constrain, validate, observe, and reason about that automation when an incorrect action can have real consequences.
@@ -200,6 +213,9 @@ A local decision to act, an authorization to act, an attempt to act, and an exte
 - Authority should decrease when critical truth is unavailable.
 - A useful architecture review states both what the system does and where its guarantees end.
 
+<details>
+<summary><strong>Evidence map // built, designed, private</strong></summary>
+
 ## Evidence and Disclosure Classification
 
 ### IMPLEMENTED / VERIFIED
@@ -235,6 +251,8 @@ A local decision to act, an authorization to act, an attempt to act, and an exte
 - Database schemas and operational logs
 - Provider-specific implementation details
 - Original private project documentation
+
+</details>
 
 ## Verified Technology Context
 

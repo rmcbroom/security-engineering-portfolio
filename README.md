@@ -1,63 +1,61 @@
-# Security Engineering Portfolio
+![Robin McBroom Security Engineering Portfolio](assets/robin-mcbroom-security-engineering-hero.png)
 
-I am a security engineer who turns ambiguous, high-consequence problems into governed engineering capabilities through architecture, detection, automation, validation, and operational ownership.
+# Robin McBroom
 
-This repository is a curated technical portfolio. It is not an open-source product repository or a substitute for a résumé. The emphasis is on how I reason about security systems: how requirements become architecture, how controls are validated, how automation is bounded, and how engineering decisions remain explainable and reviewable.
+**Security gets interesting where systems stop behaving like the diagram.**
 
-My hands-on work spans detection engineering, data-protection and insider-risk controls, AWS- and GCP-hosted security infrastructure, security automation, telemetry, integrations, and operational troubleshooting. The portfolio pairs professional clean-room methodologies with independently owned engineering work while keeping employer and security-sensitive implementation details private.
+I turn ambiguous, high-consequence security problems into systems people can reason about, test, and operate.
 
-## Independent Secure Systems Engineering
+- Detection engineering and data protection / insider risk
+- AWS / GCP security infrastructure and operational troubleshooting
+- Security automation, telemetry, and integrations
 
-Independent projects can show greater technical depth because I own the underlying work. Some implementation details still remain private when disclosure would expose security-sensitive behavior or intellectual property.
+---
 
-### [Quant Core — Engineering Guardrails for an Automated Decision System](independent-projects/quant-core/README.md)
+## Start here
 
-An independently engineered system exploring modular automation, pre-execution risk controls, operational state, and architectural validation around consequential external actions. The case study separates verified implementation from a designed—but not implemented—higher-assurance direction.
+**I want to see…**
 
-## Professional Methodologies
+- [how Robin engineers detections →](professional-methodologies/detection-engineering-validation/README.md)
+- [whether she actually knows cloud infrastructure →](professional-methodologies/cloud-security-infrastructure/README.md)
+- [something she designed and built independently →](independent-projects/quant-core/README.md)
+- [how she thinks about security automation →](capability-highlights/security-automation-tooling.md)
+- [a grounded take on AI + security →](capability-highlights/ai-assisted-security-engineering.md)
 
-Professional experience is represented through independently authored explanations and, where useful, newly created synthetic demonstrations. Employer and client artifacts are not copied, sanitized, or reconstructed.
+## Featured engineering stories
 
-### [Detection Engineering & Validation](professional-methodologies/detection-engineering-validation/README.md)
+### ◇ Detection Engineering — when is a detection trustworthy?
 
-A lifecycle methodology for telemetry fitness, validation, measurable tuning, operationalization, continuing monitoring, and engineering governance.
+`[ CLEAN ROOM ]` Start with the behavior. Verify the telemetry. Test the negative cases. Measure before tuning. Operate the result as a security control.
 
-### [Cloud Security Infrastructure as a Production System](professional-methodologies/cloud-security-infrastructure/README.md)
+[Explore the detection workbench →](professional-methodologies/detection-engineering-validation/README.md)
 
-A clean-room case study on operating AWS- and GCP-hosted security capabilities across infrastructure health, machine identity, telemetry, integrations, upgrades, troubleshooting, and layered validation.
+### ◆ Cloud Security — who operates the security system?
 
-## Capability Highlights
+`[ CLEAN ROOM ]` AWS and GCP infrastructure, machine identity, telemetry, scanners, integrations, upgrades, and the dependency chain behind a healthy control.
 
-- [Security Automation & Tooling](capability-highlights/security-automation-tooling.md) — analyst workflows, deterministic enrichment, repeatable operations, failure handling, and human decision boundaries.
-- [AI-Assisted Security Engineering](capability-highlights/ai-assisted-security-engineering.md) — specialized analytical workflows, tool and authority boundaries, evaluation, human oversight, and governance.
+[Trace the system →](professional-methodologies/cloud-security-infrastructure/README.md)
 
-## Architecture, Validation, and Governance
+### △ Quant Core — what changes when automation can act?
 
-Architecture and governance are horizontal engineering disciplines throughout the portfolio rather than a standalone compliance project. Substantive work should make clear:
+`[ VERIFIED ]` An independent build examining risk gates, persistent evidence, external state, architectural boundaries, and where the current guarantees stop.
 
-- what problem or failure is being addressed;
-- what evidence and telemetry support the design;
-- where trust, control, and human-authority boundaries exist;
-- how success and failure behavior are validated;
-- what durable evidence is retained; and
-- when a decision should be reconsidered.
+[Inspect the build →](independent-projects/quant-core/README.md)
 
-Reusable authoring and review standards are maintained in [`frameworks/`](frameworks/).
+## Notes from the lab wall
 
-## Deferred Areas
+- **UNKNOWN ≠ SAFE** — missing evidence should reduce authority, not create permission.
+- **INTENT IS NOT EXECUTION** — a decision, an attempt, and a confirmed result are different facts.
+- **A VALID QUERY CANNOT COMPENSATE FOR MISSING EVIDENCE.**
+- **THE MODEL IS NOT THE SECURITY BOUNDARY.**
 
-Data Protection & Insider Risk is planned as the next substantial professional methodology after the initial release.
+## From the workbench
 
-Behavioral Security Analytics & Signal Correlation remains deferred until its standalone factual basis is verified. Its clean-room conceptual progression is:
+- [Security Automation & Tooling](capability-highlights/security-automation-tooling.md) — automate the deterministic work; keep consequential judgment accountable.
+- [AI-Assisted Security Engineering](capability-highlights/ai-assisted-security-engineering.md) — evidence, tool authority, human approval, and the limits of experimental systems.
 
-`Signal → Behavioral Context → Pattern → Correlation → Risk Context → Investigation`
+## Built with evidence, not secrets
 
-No standalone behavioral-security implementation is claimed by this repository at this stage.
+Professional work is represented through independently authored clean-room models and synthetic examples. Employer artifacts and security-sensitive implementation details stay private. [Read the disclosure policy →](DISCLOSURE.md)
 
-## Disclosure and Status
-
-Every substantive page distinguishes ownership, implementation status, disclosure level, and evidence status where those fields are relevant. The repository-wide rules are defined in [DISCLOSURE.md](DISCLOSURE.md).
-
-The governing principle is:
-
-> Expose the engineering decision. Protect the implementation.
+Reusable [decision](frameworks/architecture-decision-record.md), [validation](frameworks/validation-plan.md), and [review](frameworks/disclosure-review.md) frameworks sit behind the work.
